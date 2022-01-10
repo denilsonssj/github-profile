@@ -1,5 +1,7 @@
+import { ProfileContainer } from './styles';
+
 function Profile() {
-  return <div>.</div>;
+  return <ProfileContainer>Oi</ProfileContainer>;
 }
 
 export default Profile;
