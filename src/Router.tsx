@@ -2,6 +2,7 @@ import {
   BrowserRouter, Routes, Route, RouteProps,
 } from 'react-router-dom';
 
+import MainLayout from 'layouts/Main/MainLayout';
 import Profile from 'views/Profile';
 
 const routes: Array<RouteProps> = [
@@ -14,7 +15,16 @@ function Router() {
       <Routes>
         {
             routes.map(({ path, element, ...rest }: RouteProps) => (
-              <Route key={path} path={path} element={element} {...rest} />
+              <Route
+                key={path}
+                path={path}
+                element={(
+                  <MainLayout>
+                    {element}
+                  </MainLayout>
+                )}
+                {...rest}
+              />
             ))
         }
       </Routes>
