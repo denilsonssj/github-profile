@@ -26,6 +26,16 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", ".jsx", ".tsx"] }],
         "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-no-bind": [
+            "error", 
+            {
+                "ignoreDOMComponents": true,
+                "ignoreRefs": true,
+                "allowArrowFunctions": true,
+                "allowFunctions": true,
+                "allowBind": true
+            }
+        ]
     }
 }
