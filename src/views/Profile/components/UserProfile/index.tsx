@@ -9,6 +9,7 @@ import {
   UserInfoLine,
   UserTitleName,
   Value,
+  Link,
 } from './styles';
 
 function UserProfile() {
@@ -39,7 +40,7 @@ function UserProfile() {
         </UserInfoLine>
         <UserInfoLine>
           <Label>Blog:</Label>
-          <Value>{githubState.user?.blog}</Value>
+          <Link href={githubState.user?.blog}>{githubState.user?.blog}</Link>
         </UserInfoLine>
         <UserInfoLine>
           <ProfileStatus />

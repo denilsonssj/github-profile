@@ -49,3 +49,11 @@ export const Value = styled.span`
     font-size: 1.2rem;
     font-weight: 400;
 `;
+
+export const Link = styled.a`
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.black};
+`;
