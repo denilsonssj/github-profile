@@ -8,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         font-size: 60%;
     }
+
+    #wrapper {
+        height: 100vh;
+        width: 100vw;
+    }
 `;
 
 export default GlobalStyle;
