@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: space-between;
-    padding: 3.0rem;
+    padding: 2rem 3rem 0 3rem;
 `;
 
 export const SearchContainer = styled.div`
