@@ -20,11 +20,11 @@ function ProfileStatus() {
       </ProfileStatusColumn>
       <ProfileStatusColumn>
         <ProfileStatusKey>Gists</ProfileStatusKey>
-        <ProfileStatusValue>{githubState.user?.public_gists}</ProfileStatusValue>
+        <ProfileStatusValue>{githubState.user?.publicGists}</ProfileStatusValue>
       </ProfileStatusColumn>
       <ProfileStatusColumn>
         <ProfileStatusKey>Repos</ProfileStatusKey>
-        <ProfileStatusValue>{githubState.user?.public_repos}</ProfileStatusValue>
+        <ProfileStatusValue>{githubState.user?.publicRepos}</ProfileStatusValue>
       </ProfileStatusColumn>
     </ProfileStatusContainer>
   );

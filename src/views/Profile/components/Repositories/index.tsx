@@ -44,7 +44,7 @@ function Repositories() {
                       key={repository.id}
                       id={repository.id}
                       name={repository.name}
-                      full_name={repository.full_name}
+                      full_name={repository.fullName}
                     />
                   ))
                 }
@@ -58,7 +58,7 @@ function Repositories() {
                       key={repository.id}
                       id={repository.id}
                       name={repository.name}
-                      full_name={repository.full_name}
+                      full_name={repository.fullName}
                     />
                   ))
                 }

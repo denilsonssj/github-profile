@@ -1,8 +1,8 @@
 export interface IRepositoryResponse {
   id: string;
   name: string;
-  full_name: string;
+  fullName: string;
   private: boolean;
-  html_url: string;
+  htmlUrl: string;
   url: string;
 }

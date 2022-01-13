@@ -52,7 +52,15 @@ function GithubProvider({ children }: GithubProviderProps) {
         setGithubState((prevState) => ({
           ...prevState,
           hasUser: true,
-          user: data,
+          user: {
+            ...data,
+            avatarUrl: data.avatar_url,
+            htmlUrl: data.html_url,
+            publicRepos: data.public_repos,
+            publicGists: data.public_gists,
+            followers: 0,
+            following: 0,
+          },
         }));
       }).finally(() => {
         setGithubState((prevState) => ({
@@ -66,7 +74,12 @@ function GithubProvider({ children }: GithubProviderProps) {
     api.get(`users/${username}/repos`).then(({ data }) => {
       setGithubState((prevState) => ({
         ...prevState,
-        repositories: data,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        repositories: data.map((item: any) => ({
+          ...item,
+          fullName: item.full_name,
+          htmlUrl: item.full_name,
+        })),
       }));
     });
   }
@@ -75,7 +88,11 @@ function GithubProvider({ children }: GithubProviderProps) {
     api.get(`/users/${username}/starred`).then(({ data }) => {
       setGithubState((prevState) => ({
         ...prevState,
-        starred: data,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        starred: data.map((item: any) => ({
+          ...item,
+          fullName: item.full_name,
+        })),
       }));
     });
   }

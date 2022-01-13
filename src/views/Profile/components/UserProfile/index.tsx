@@ -17,7 +17,7 @@ function UserProfile() {
     <UserProfileContainer>
       <UserAvatarContainer>
         <UserAvatar
-          src={githubState.user?.avatar_url}
+          src={githubState.user?.avatarUrl}
           height="200px"
           width="auto"
           alt={githubState.user?.name}
