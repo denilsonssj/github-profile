@@ -11,6 +11,7 @@ const main = {
     green: colors.GREEN,
     black: colors.BLACK,
     white: colors.WHITE,
+    gray: colors.GRAY,
   },
 };
 

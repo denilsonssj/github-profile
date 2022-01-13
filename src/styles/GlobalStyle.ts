@@ -7,11 +7,13 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         font-size: 60%;
+        height: 100vh;
+        width: 100vw;
     }
 
     #wrapper {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 `;
 
