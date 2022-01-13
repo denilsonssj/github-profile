@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import Header from 'components/Header';
+import GithubProvider from 'contexts/GithubContext';
 import { MainLayoutContainer, Main } from './styles';
 
 interface MainLayoutProps {
@@ -9,12 +10,14 @@ interface MainLayoutProps {
 
 function MainLayout({ children }: MainLayoutProps) {
   return (
-    <MainLayoutContainer>
-      <Header />
-      <Main>
-        {children}
-      </Main>
-    </MainLayoutContainer>
+    <GithubProvider>
+      <MainLayoutContainer>
+        <Header />
+        <Main>
+          {children}
+        </Main>
+      </MainLayoutContainer>
+    </GithubProvider>
   );
 }
 

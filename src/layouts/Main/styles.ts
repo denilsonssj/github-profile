@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const MainLayoutContainer = styled.div`
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: ${({ theme }) => theme.colors.background};
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+    padding: 2rem;
+`;
