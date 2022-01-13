@@ -63,7 +63,7 @@ function GithubProvider({ children }: GithubProviderProps) {
   }
 
   function getUserRepos(username: string) {
-    api.get(`users/${username}/starred`).then(({ data }) => {
+    api.get(`users/${username}/repos`).then(({ data }) => {
       setGithubState((prevState) => ({
         ...prevState,
         repositories: data,
