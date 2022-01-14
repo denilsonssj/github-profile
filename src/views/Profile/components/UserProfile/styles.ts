@@ -7,6 +7,13 @@ export const UserProfileContainer = styled.div`
         "user-avatar-area user-profile-info-area user-profile-info-area user-profile-info-area"
         "user-avatar-area user-info-area user-info-area user-info-area"
         "user-avatar-area user-info-area user-info-area user-info-area";
+
+        @media screen and (max-width: 900px) {
+            grid-template:
+                "user-avatar-area"
+                "user-profile-info-area"
+                "user-info-area"
+        }
 `;
 
 export const UserAvatarContainer = styled.div`
@@ -28,6 +35,10 @@ export const UserTitleName = styled.h1`
     font-size: 2.2rem;
     font-weight: 700;
     grid-area: user-info-area;
+
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
 `;
 
 export const UserInfoLine = styled.div`
